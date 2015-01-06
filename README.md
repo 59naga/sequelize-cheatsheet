@@ -36,10 +36,10 @@ Project= sequelize.define 'Project',
 
 Project.sync().success ->
   Project.create
-    description:'これは訓練ではない'
     title:'とりあえず燃えてる'
+    description:'これは訓練ではない'
   .success (project)->
-    console.log project
+    console.log project # > { id: 1,title: 'とりあえず燃えてる', description: 'これは訓練ではない', updated_at: ..., created_at: ... }
 ```
 ## [Column types][3]
 ```coffee-script
